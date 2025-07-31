@@ -29,6 +29,7 @@ because of issue in block scope and functional scope
     var b = 24;
     var b = 23
     console.log(a)
+    console.log(b)
 }
 
 console.log(b)
