@@ -27,3 +27,8 @@ let state;
 
 console.log(typeof undefined); // undefined
 console.log(typeof null); // object
+function a(){
+    console.log("hello");
+}
+
+console.log(typeof (a))
