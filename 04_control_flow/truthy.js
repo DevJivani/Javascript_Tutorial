@@ -13,9 +13,9 @@ if (userEmail) {
 //truthy values
 // "0", 'false', " ", [], {}, function(){}
 
-// if (userEmail.length === 0) {
-//     console.log("Array is empty");
-// }
+if (userEmail.length === 0) {
+    console.log("Array is empty");
+}
 
 const emptyObj = {}
 
@@ -24,12 +24,12 @@ if (Object.keys(emptyObj).length === 0) {
 }
 
 // Nullish Coalescing Operator (??): null undefined
-
+// this operator return the left side operand and if null or undefined is available so its return the right side operand
 let val1;
-// val1 = 5 ?? 10
-// val1 = null ?? 10
-// val1 = undefined ?? 15
-val1 = null ?? 10 ?? 20
+// val1 = 55 ?? 10  // 55
+// val1 = null ?? 10  // 10
+// val1 = undefined ?? 15  // 15
+val1 = 24 ?? null ?? 10 ?? 20 // 24
 
 
 
