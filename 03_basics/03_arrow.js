@@ -3,7 +3,7 @@ const user = {
     price: 999,
 
     welcomeMessage: function() {
-        // console.log(`${this.username} , welcome to website`);       // when use current context (username , price) to access that time use the this keyword in object
+        console.log(`${this.username} , welcome to website`);       // when use current context (username , price) to access that time use the this keyword in object
         // console.log(this);     // ouput : {
                                         //     username: 'hitesh',
                                         //     price: 999,
@@ -13,15 +13,15 @@ const user = {
 
 }
 
-user.welcomeMessage()
-// user.username = "sam"
-// user.welcomeMessage()
+// console.log(this); // this keyword used for check the current context and its return the object , here output : {}
 
-// console.log(this);  //  ouput : {}
+user.welcomeMessage()
+user.username = "sam"
+user.welcomeMessage()
 
 // function chai(){
 //     let username = "hitesh"
-//     console.log(this.username);    //  this keyword is not used in function
+//     console.log(this.username);    //  this keyword is not used in function , output:undefined
 // }
 
 // chai()
@@ -35,7 +35,7 @@ user.welcomeMessage()
 
 // const chai =  () => {
 //     let username = "hitesh"
-//     console.log(this);
+//     console.log(this);  // output:{}
 // }
 
 
