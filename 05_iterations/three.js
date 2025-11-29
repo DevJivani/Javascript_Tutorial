@@ -20,13 +20,17 @@ const map = new Map()
 map.set("IN", "India")
 map.set('USA', "United States of America")
 map.set('Fr', "France")
-// map.set('IN', "Indiad")
+map.set('IN', "Indiad")            // output : Map(3) {
+                                                // 'IN' => 'Indiad',
+                                                // 'USA' => 'United States of America',
+                                                // 'Fr' => 'France'
+                                                // }
 
 
 // console.log(map);
 
 for (const [key, value] of map) {
-    // console.log(key, ':-', value);
+    console.log(key+  ':-'+value);
 }
 
 const myObject = {
@@ -36,5 +40,4 @@ const myObject = {
 
 for (const [key, value] of myObject) {
     console.log(key, ':-', value);
-    
 }         // for of loop is not used in object
