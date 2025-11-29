@@ -32,13 +32,13 @@
 // })
 
 // promiseThree.then(function(user){
-//     console.log(user);
+//     console.log(user.username);
 // })
 
 // const promiseFour = new Promise(function(resolve, reject){
 //     setTimeout(function(){
 //         let error = true
-//         if (!error) {
+//         if (error) {
 //             resolve({username: "hitesh", password: "123"})
 //         } else {
 //             reject('ERROR: Something went wrong')
@@ -58,52 +58,52 @@
 
 
 
-const promiseFive = new Promise(function(resolve, reject){
-    setTimeout(function(){
-        let error = true
-        if (!error) {
-            resolve({username: "javascript", password: "123"})
-        } else {
-            reject('ERROR: JS went wrong')
-        }
-    }, 1000)
-});
+// const promiseFive = new Promise(function(resolve, reject){
+//     setTimeout(function(){
+//         let error = true
+//         if (error) {
+//             resolve({username: "javascript", password: "123"})
+//         } else {
+//             reject('ERROR: JS went wrong')
+//         }
+//     }, 1000)
+// });
 
-async function consumePromiseFive(){
-    try {
-        const response = await promiseFive
-        console.log(response);
-    } catch (error) {
-        console.log(error);
-    }
-}
+// async function consumePromiseFive(){
+//     try {
+//         const response = await promiseFive
+//         console.log(response);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-consumePromiseFive()
+// consumePromiseFive()
 
 // async function getAllUsers(){
 //     try {
 
-            // ---> when fethching the data so type of given data is string then its convert into the json using .json()
+//            // ---> when fethching the data so type of given data is string then its convert into the json using .json()
              
 //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
 
 //         const data = await response.json()
-//         console.log(data);
+//         console.log(data[0].email);
 //     } catch (error) {
 //         console.log("E: ", error);
 //     }
 // }
 
-//getAllUsers()
+// getAllUsers()
 
-// fetch('https://api.github.com/users/hiteshchoudhary')
-// .then((response) => {
-//     return response.json()
-// })
-// .then((data) => {
-//     console.log(data);
-// })
-// .catch((error) => console.log(error))
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
